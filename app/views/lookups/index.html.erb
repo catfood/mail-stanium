@@ -1,0 +1,27 @@
+<h1>Listing lookups</h1>
+
+<table>
+  <tr>
+    <th>Sorttype</th>
+    <th>Match</th>
+    <th>Destination</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lookups.each do |lookup| %>
+  <tr>
+    <td><%= lookup.sorttype %></td>
+    <td><%= lookup.match %></td>
+    <td><%= lookup.destination %></td>
+    <td><%= link_to 'Show', lookup %></td>
+    <td><%= link_to 'Edit', edit_lookup_path(lookup) %></td>
+    <td><%= link_to 'Destroy', lookup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lookup', new_lookup_path %>

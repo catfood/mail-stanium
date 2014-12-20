@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sorttype: MyString
+  match: MyString
+  destination: MyString
+
+two:
+  sorttype: MyString
+  match: MyString
+  destination: MyString

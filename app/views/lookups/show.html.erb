@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sorttype:</b>
+  <%= @lookup.sorttype %>
+</p>
+
+<p>
+  <b>Match:</b>
+  <%= @lookup.match %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%= @lookup.destination %>
+</p>
+
+
+<%= link_to 'Edit', edit_lookup_path(@lookup) %> |
+<%= link_to 'Back', lookups_path %>
