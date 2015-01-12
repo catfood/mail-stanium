@@ -36,10 +36,18 @@ set :deploy_to, '/usr/local/www/apps/mail-stanium'
 
 namespace :deploy do
 
+#desc "Run the super-awesome rake task"
+#task :super_awesome do
+#  rake = fetch(:rake, 'rake')
+#  rails_env = fetch(:rails_env, 'production')
+#  run "cd '#{current_path}' && #{rake} super_awesome RAILS_ENV=#{rails_env}"
+#end
+
+#    execute :rake, 'db:migrate'
+
   desc 'Publish application'
   task :publishing do
     execute :bundle, 'install --path vendor'
-    execute :rack 'db:migrate'
   end
 
   desc 'Restart application'
