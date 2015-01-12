@@ -34,27 +34,26 @@ set :deploy_to, '/usr/local/www/apps/mail-stanium'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-namespace :deploy do
-
 #desc "Run the super-awesome rake task"
 #task :super_awesome do
 #  rake = fetch(:rake, 'rake')
 #  rails_env = fetch(:rails_env, 'production')
 #  run "cd '#{current_path}' && #{rake} super_awesome RAILS_ENV=#{rails_env}"
 #end
-
 #    execute :rake, 'db:migrate'
+
+namespace :deploy do
 
   desc 'Publish application'
   task :publishing do
-    execute :bundle, 'install --path vendor'
+#    execute :bundle, 'install --path vendor'
   end
 
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
+      #execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
